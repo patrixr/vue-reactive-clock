@@ -11,7 +11,7 @@ const ClockPlugin = {
       },
       computed: {
         time() {
-          return `${this.now.getHours()}:${this.now.getHours()}`;
+          return `${this.now.getHours()}:${this.now.getMinutes()}`;
         },
         dateString() {
           return this.now.toDateString();
