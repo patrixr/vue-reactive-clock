@@ -35,9 +35,9 @@ const ClockPlugin = {
       created() {
         setTimeout(() => {
             this.update();
-            setInterval(() => this.update(), minute);
+            setInterval(() => this.update(), 60 * 1000);
           },
-          (60 - this.now.getSeconds()) * second // seconds to 60
+          (60 - this.now.getSeconds()) * 1000 // seconds to 60
         );
       }
     });
