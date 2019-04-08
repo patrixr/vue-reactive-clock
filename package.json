@@ -1,0 +1,21 @@
+{
+  "name": "vue-reactive-clock",
+  "version": "1.0.0",
+  "description": "A clock plugin used to build time-reactive UIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "clock",
+    "reactive",
+    "vue",
+    "time",
+    "dashboard"
+  ],
+  "author": "Patrick R",
+  "license": "ISC",
+  "dependencies": {
+    "vue": ">=2.6"
+  }
+}
