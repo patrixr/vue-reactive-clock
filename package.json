@@ -1,6 +1,7 @@
 {
   "name": "vue-reactive-clock",
-  "version": "1.0.3",
+  "version": "1.0.4",
+  "repository": "patrixr/vue-reactive-clock",
   "description": "A clock plugin used to build time-reactive UIs",
   "main": "index.js",
   "scripts": {
@@ -15,7 +16,5 @@
   ],
   "author": "Patrick R",
   "license": "ISC",
-  "dependencies": {
-    "vue": ">=2.6"
-  }
+  "dependencies": {}
 }

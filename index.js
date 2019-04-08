@@ -1,20 +1,19 @@
-import Vue from 'vue'
-
 const ClockPlugin = {
   install(_Vue) {
 
-    const vm = new Vue({
+    const vm = new _Vue({
       data() {
         return {
-          now: new Date()
+          now: Date.now()
         }
       },
       computed: {
         time() {
-          return `${this.now.getHours()}:${this.now.getMinutes()}`;
+          let d = new Date(this.now);
+          return `${d.getHours()}:${d.getMinutes()}`;
         },
         dateString() {
-          return this.now.toDateString();
+          return new Date(this.now).toDateString();
         },
         startOfDay() {
           let start = new Date(this.now);
@@ -29,7 +28,7 @@ const ClockPlugin = {
       },
       methods: {
         update() {
-          this.now = new Date();
+          this.now = Date.now()
         }
       },
       created() {
@@ -37,7 +36,7 @@ const ClockPlugin = {
             this.update();
             setInterval(() => this.update(), 60 * 1000);
           },
-          (60 - this.now.getSeconds()) * 1000 // seconds to 60
+          (60 - this.now.getSeconds()) * 1000
         );
       }
     });
