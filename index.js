@@ -37,7 +37,7 @@ const ClockPlugin = {
             this.update();
             setInterval(() => this.update(), minute);
           },
-          (60 - this.now.seconds()) * second // seconds to 60
+          (60 - this.now.getSeconds()) * second // seconds to 60
         );
       }
     });
