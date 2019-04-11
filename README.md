@@ -39,7 +39,8 @@ You can use `$clock` programatically in your computed properties to have your UI
 ```
 computed: {
   isUrgent() {
-    return this.$clock.now.getHours() > 18;
+    let d =  new Date(this.$clock.now);
+    return d.getHours() > 18;
   }
 }
 ```
