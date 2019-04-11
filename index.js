@@ -32,11 +32,12 @@ const ClockPlugin = {
         }
       },
       created() {
+        let d = new Date(this.now);
         setTimeout(() => {
             this.update();
             setInterval(() => this.update(), 60 * 1000);
           },
-          (60 - this.now.getSeconds()) * 1000
+          (60 - d.getSeconds()) * 1000
         );
       }
     });
